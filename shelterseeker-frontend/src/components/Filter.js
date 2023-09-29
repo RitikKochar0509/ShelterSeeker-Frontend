@@ -47,7 +47,7 @@ setCity('');
   return (
     <Box sx ={{m:4}}>
         <Typography sx = {{px:1, fontSize:'18px',fontWeight:700,color:gray[700],mb:2}}>Search Property for Rent</Typography>
-    <Box sx = {{ display:'flex', justifyContent:'space-between',border:`1px solid ${gray[300]}`,borderRadius:4,py:2,px:8,alignItems:'center',background:gray[200],mx:1 }}>
+    <Box sx = {{ display:'flex', flexWrap:'wrap', justifyContent:'space-between',border:`1px solid ${gray[300]}`,borderRadius:4,py:2,px:8,alignItems:'center',background:gray[200],mx:1 }}>
         <Box>
             <Typography sx = {{mb:0.5, fontSize:'14px',fontWeight:500,color:gray[600]}}>City</Typography>
             <Autocomplete sx = {{width:'250px'}}
@@ -93,7 +93,7 @@ setCity('');
       renderInput={(params) => <TextField {...params} variant='standard'  />}
     />
         </Box>
-        <Box>
+        <Box sx = {{my:[2,2,0]}}>
           {
             filteredData && filteredData.length>0 ?
             <Button onClick={clearFilter} variant='contained' sx = {{background:red[600],borderRadius:'10px'}}>Reset</Button>
